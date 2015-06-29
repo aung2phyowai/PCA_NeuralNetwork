@@ -22,7 +22,7 @@ ind_test = randperm(length(testLabels));
 
 trainData = trainData(:,ind_train);
 testData = testData(:,ind_test);
-trainLabels = trainLabels(ind_train);
+trainLabels = trainLabels(ind_train);https://github.com/varun-invent/PCA_NeuralNetwork.git
 testLabels = testLabels(ind_test);
 
 

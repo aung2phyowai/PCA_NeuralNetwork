@@ -1,0 +1,99 @@
+//Create a repo
+1. Goto gitHub and create a remote repo
+2. Copy the link of the repo so that we can push our data/code to that repo
+3. Create a local repo on computer
+    Goto the folder which you want to upload. Then type:  
+    
+    git init                       //This will create a .git folder to initialize the directory for the git to track.
+    
+4. Add all the files and folder to the staging area. Staging area is a place on your system which is in between your local repo and remote repo. Do this by typing:
+    
+    git add -A                                 //This will add all files and folders to the staging area
+
+5. Now commit the changes in the files if any. Type:
+    
+    git commit -m 'Your message'
+    
+6. Get the handle of the link of the remote repo where you want to upload the data/code.  Type:
+
+    git remote add origin <our github repo link>    //'origin' is just a variable name, we can have any name for it
+    
+7. Now upload or PUSH the data/code. Type:
+    
+    git push origin master
+    
+
+//To clone a repo:
+git clone <repo link>
+
+// when you clone it already contains .git folder so you dont have to "git init"
+
+//If you want to push that repo to our github:
+// create a github repo in out guthub
+// And then :
+
+git add -A
+git commit -m "message"
+git remote add origin <our github repo link>
+git push origin master
+
+
+
+// When you want to fork and sync a repo A
+//  
+
+1. Fork the repo 'A' online. // Now the repo 'A' is listed in your Github account
+2. Clone the repository 'A' to your computer (locally) by typing:
+    
+    git clone <link to your github account> // This will copy the contents into some directory of A's computer
+    
+3. Now, you have to check whether any changes have occoured in 'A'. If any changes have occoured, then you need to sync the 'A' in your local computer as well as in your github account.    
+     
+     3.1.
+
+    Type git remote -v and press Enter. You'll see the current configured remote repository for your fork.
+
+    git remote -v
+    # origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+    # origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+
+    Type git remote add upstream, and then paste the URL you copied in Step 2 and press Enter. It will look like this:
+    
+    git remote add upstream <'A's repo link>                   //upstream is again just a variable
+
+    git remote add upstream https://github.com/A_repo/A.git
+
+    To verify the new upstream repository you've specified for your fork, type git remote -v again. You should see the URL for your fork as origin, and the URL for the original repository as upstream.
+
+    git remote -v
+    # origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+    # origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+    # upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+    # upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+    
+    
+4. In 3. you have set the handles needed to sync. Now you will actually sync your repo with the owner's Repo.
+    
+    4.1. Change the current working directory to your local project.
+    4.2. Fetch the details of the owner's repo using the upstream handle you have created. Type :
+        
+        git fetch upstream
+    idn't have any unique commits, Git will instead perform a "fast-forward":
+    4.3. Now, just type the below mentioned commands. Type :
+        
+        git checkout master   // Goes out of your master
+        git merge upstream/master    // Merges the contents of the owner's master with you.
+        
+5. The last job is to upload the synced files and folders to your github account. To do that simply follow the procedure to upload a repository. 
+        
+        
+ 
+     
+
+
+
+
+
+
+git remote add origin https://github.com/varun-invent/PCA_NeuralNetwork.git
+
