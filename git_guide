@@ -87,7 +87,14 @@ git push origin master
 5. The last job is to upload the synced files and folders to your github account. To do that simply follow the procedure to upload a repository. 
         
         
- 
+Note: While pushing to a repo If you get error that 'update rejected', then first pull the repo using : 
+        git pull origin master
+        
+        and then do:
+        git add -A
+        git push origin master
+        
+        
      
 
 
